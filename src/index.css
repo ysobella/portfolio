@@ -40,6 +40,39 @@
   border-radius: 100%;
 }
 
+.tech-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+ }
+ 
+ .carousel-images {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+ }
+ 
+ .carousel-image {
+  width: 100px; /* Adjust based on your needs */
+  height: 100px; /* Adjust based on your needs */
+  object-fit: cover;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+ }
+ 
+ .carousel-image.active {
+  opacity: 1;
+ }
+ 
+ .carousel-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+ }
+ 
+
 @layer base {
   body {
     @apply font-secondary text-lg leading-8 text-white;

@@ -17,10 +17,20 @@ const Banner = () => {
         <div className='flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12'>
           {/* text */}
           <div className='flex-1 text-center font-secondary lg:text-left'>
-            <h1 className='text-[55px] font-bold leading-[0.8] lg:text-[80px] mt-20 mb-5'>
+            <motion.h1 
+              variants={fadeIn('up', 0.3)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              className='text-[55px] font-bold leading-[0.8] lg:text-[80px] mt-20 mb-5'>
               hi! bella here.
-            </h1>
-            <div className='mb-6 text-[36px] lg:text-[50px] font-secondary font-bold leading-[1]'>
+            </motion.h1>
+            <motion.div 
+              variants={fadeIn('up', 0.4)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              className='mb-6 text-[36px] lg:text-[50px] font-secondary font-bold leading-[1]'>
               <span className='text-white mr-4'>I am a</span>
               <TypeAnimation sequence={[
                 'Developer', 
@@ -37,18 +47,33 @@ const Banner = () => {
                 wrapper='span'
                 repeat={Infinity}
                 />
-            </div>
-              <p className='mb-8 max-w-xl mx-auto lg:mx-0'>
+            </motion.div>
+              <motion.p 
+                variants={fadeIn('up', 0.5)}
+                initial='hidden'
+                whileInView={'show'}
+                viewport={{ once: false, amount: 0.7 }}
+                className='mb-8 max-w-xl mx-auto lg:mx-0'>
               With a passion for software development and innovation, 
               I thrive on transforming concepts into tangible solutions
               that push the boundaries of technology.
-              </p>
-              <div className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
+              </motion.p>
+              <motion.div 
+                variants={fadeIn('up', 0.6)}
+                initial='hidden'
+                whileInView={'show'}
+                viewport={{ once: false, amount: 0.7 }}
+                className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
                 <button className='btn btn-lg'>Say hi!</button>
-                <a href='#' className='text-gradient btn-link'>My Portfolio</a>
-              </div>
+                <a href='#' className='text-gradient btn-link'>Download CV</a>
+              </motion.div>
               {/* socials */}
-              <div className='flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0'>
+              <motion.div 
+                variants={fadeIn('up', 0.7)}
+                initial='hidden'
+                whileInView={'show'}
+                viewport={{ once: false, amount: 0.7 }}
+                className='flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0'>
                 <a href='#'>
                   <FaGithub />
                 </a>
@@ -58,13 +83,18 @@ const Banner = () => {
                 <a href='#'>
                   <FaInstagram />
                 </a>
-              </div>
+              </motion.div>
           
           </div>
           {/* image */}
-          <div className='mx-auto lg:flex flex-1 max-w-[320px] lg:max-w-[482px]'>
+          <motion.div 
+            variants={fadeIn('down', 0.5)}
+            initial='hidden'
+            whileInView={'show'}
+            // viewport={{ once: false, amount: 0.7 }}
+            className='mx-auto lg:flex flex-1 max-w-[320px] lg:max-w-[482px]'>
             <img src={Image} alt='' />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
