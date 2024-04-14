@@ -20,11 +20,12 @@ import t16 from '../assets/tech/reactjs.png';
 import t17 from '../assets/tech/ruby.png';
 import t18 from '../assets/tech/scikit.png';
 import t19 from '../assets/tech/tailwindcss.png';
-import t20 from '../assets/tech/vercel.png';
+// import t20 from '../assets/tech/vercel.png';
+import t21 from '../assets/tech/js.png';
 
 const About = () => {
   const images = [
-    t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20
+    t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t21
  ];
   return(
     <div className='lg:min-h-[78vh] flex items-center' id='about'>
