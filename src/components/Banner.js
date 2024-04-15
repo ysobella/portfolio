@@ -2,7 +2,7 @@ import React from 'react';
 // images
 import Image from '../assets/me.svg';
 // icons
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 // type animation
 import { TypeAnimation } from 'react-type-animation';
 // motion
@@ -10,9 +10,11 @@ import { motion } from 'framer-motion';
 // variants
 import { fadeIn } from '../variants';
 
+import cv from '../assets/Ysobella-Torio-CV.pdf';
+
 const Banner = () => {
   return(
-    <section className='min-h-[85vh] lg:min-h-[78vh] flex items-center' id='home'>
+    <section className='min-h-[85vh] lg:min-h-[78vh] flex items-center mt-28' id='home'>
       <div className='container mx-auto'>
         <div className='flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12'>
           {/* text */}
@@ -68,8 +70,11 @@ const Banner = () => {
                 whileInView={'show'}
                 viewport={{ once: false, amount: 0.7 }}
                 className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
-                <button className='btn btn-lg'>Say hi!</button>
-                <a href='#' className='text-gradient btn-link'>Download CV</a>
+                {/* <a href="mailto:ysobellatorio@gmail.com" title="Email" class="button" className='btn btn-lg flex items-center'>Say hi!</a> */}
+                <a href="mailto:ysobellatorio@gmail.com" title="Email" class="button"> Say hi!
+                </a>
+                
+                <a href={cv} download className='text-cyan-300 hover:text-slate-300'>Download CV</a>
               </motion.div>
               {/* socials */}
               <motion.div 
@@ -78,13 +83,13 @@ const Banner = () => {
                 whileInView={'show'}
                 viewport={{ once: false, amount: 0.7 }}
                 className='flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0'>
-                <a href='#'>
+                <a href='https://github.com/ysobella'target="_blank" title="GitHub" className='hover:text-cyan-300'>
                   <FaGithub />
                 </a>
-                <a href='#'>
+                <a href='https://www.linkedin.com/in/ysobella-torio/' target="_blank" title="LinkedIn" className='hover:text-cyan-300'>
                   <FaLinkedin />
                 </a>
-                <a href='#'>
+                <a href='https://www.instagram.com/y.so.bella/' target="_blank" title="Instagram" className='hover:text-cyan-300'>
                   <FaInstagram />
                 </a>
               </motion.div>

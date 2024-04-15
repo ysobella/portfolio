@@ -14,7 +14,7 @@ module.exports = {
     screens: {
       sm: '640px',
       md: '768px',
-      lg: '960px',
+      lg: '1024px',
       xl: '1200px',
     },
     extend: {
@@ -23,7 +23,7 @@ module.exports = {
         accent: '#B809C3',
       },
       backgroundImage: {
-        site: "url('./assets/site-bg.jpg')",
+        site: "url('./assets/bg.png')",
         about: "url('./assets/about.png')",
         services: "url('./assets/services.png')",
       },
